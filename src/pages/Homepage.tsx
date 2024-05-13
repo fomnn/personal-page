@@ -1,4 +1,3 @@
-import { useState } from "react";
 import MdiGithub from "~icons/mdi/github";
 import MdiTelegram from "~icons/mdi/telegram";
 import IcBaselineWhatsapp from '~icons/ic/baseline-whatsapp'

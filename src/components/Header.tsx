@@ -1,6 +1,5 @@
 import SolarHomeSmileOutline from '~icons/solar/home-smile-outline'
 import SolarFolderWithFilesOutline from '~icons/solar/folder-with-files-outline'
-import SolarCaseRoundMinimalisticBroken from '~icons/solar/case-round-minimalistic-broken'
 import { Link } from "react-router-dom";
 
 
