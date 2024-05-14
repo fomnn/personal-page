@@ -173,56 +173,56 @@ export default function Tech() {
         </p>
       </div>
       <div className="space-y-2">
-        <h2 className="h text-xl font-semibold text-white">
+        <h2 className="h text-xl font-semibold text-center lg:text-start text-white">
           Programming Language
         </h2>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-1 px-4">
+        <div className="grid lg:grid-cols-5 grid-cols-3 gap-x-2 gap-y-1 px-4">
           {programmingLanguages.map((language) => (
             <SkillItem {...language} key={language.title} />
           ))}
         </div>
       </div>
       <div className="space-y-2">
-        <h2 className="h text-xl font-semibold text-white">
+        <h2 className="h text-xl font-semibold text-center lg:text-start text-white">
           Front End Framework/Library
         </h2>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-1 px-4">
+        <div className="grid lg:grid-cols-5 grid-cols-3 gap-x-2 gap-y-1 px-4">
           {frontEndFrameworks.map((framework) => (
             <SkillItem {...framework} key={framework.title} />
           ))}
         </div>
       </div>
       <div className="space-y-2">
-        <h2 className="h text-xl font-semibold text-white">
+        <h2 className="h text-xl font-semibold text-center lg:text-start text-white">
           Back End Framework/Library
         </h2>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-1 px-4">
+        <div className="grid lg:grid-cols-5 grid-cols-3 gap-x-2 gap-y-1 px-4">
           {backendFrameworks.map((framework) => (
             <SkillItem {...framework} key={framework.title} />
           ))}
         </div>
       </div>
       <div className="space-y-2">
-        <h2 className="h text-xl font-semibold text-white">
+        <h2 className="h text-xl font-semibold text-center lg:text-start text-white">
           Fullstack Framework
         </h2>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-1 px-4">
+        <div className="grid lg:grid-cols-5 grid-cols-3 gap-x-2 gap-y-1 px-4">
           {fullstackFrameworks.map((framework) => (
             <SkillItem {...framework} key={framework.title} />
           ))}
         </div>
       </div>
       <div className="space-y-2">
-        <h2 className="h text-xl font-semibold text-white">Databases</h2>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-1 px-4">
+        <h2 className="h text-xl font-semibold text-center lg:text-start text-white">Databases</h2>
+        <div className="grid lg:grid-cols-5 grid-cols-3 gap-x-2 gap-y-1 px-4">
           {databases.map((database) => (
             <SkillItem {...database} key={database.title} />
           ))}
         </div>
       </div>
       <div className="space-y-2">
-        <h2 className="h text-xl font-semibold text-white">Others</h2>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-1 px-4">
+        <h2 className="h text-xl font-semibold text-center lg:text-start text-white">Others</h2>
+        <div className="grid lg:grid-cols-5 grid-cols-3 gap-x-2 gap-y-1 px-4">
           {others.map((other) => (
             <SkillItem {...other} key={other.title} />
           ))}
