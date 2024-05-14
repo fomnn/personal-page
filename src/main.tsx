@@ -5,10 +5,10 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
-import Homepage from '@/pages/Homepage';
-import Projects from '@/pages/Projects';
-import Bag from '@/pages/Bag';
+} from "react-router-dom"
+import Homepage from '@/pages/Homepage'
+import Projects from '@/pages/Projects'
+import Skill from '@/pages/Skill.tsx'
 
 const router = createBrowserRouter([
   {
@@ -24,12 +24,12 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "bag",
-        element: <Bag />,
-      },
+        path: "tech",
+        element: <Skill />
+      }
     ]
   },
-], {basename: '/personal-page/'});
+], {basename: '/personal-page/'})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
