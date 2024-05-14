@@ -1,4 +1,4 @@
-import { SVGProps, type CSSProperties } from "react";
+import { SVGProps } from "react";
 import EosIconsMaster from "~icons/eos-icons/master";
 
 export default function SkillItem({
