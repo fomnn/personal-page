@@ -1,43 +1,75 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom"
-import Homepage from '@/pages/Homepage'
-import Projects from '@/pages/Projects'
-import Skill from '@/pages/Skill'
-import About from '@/pages/About.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EnHomepage from "@/pages/en/Homepage.tsx";
+import EnProjects from "@/pages/en/Projects.tsx";
+import EnSkill from "@/pages/en/Skill.tsx";
+import EnAbout from "@/pages/en/About.tsx";
+import IdHomepage from "@/pages/id/Homepage.tsx";
+import IdProjects from "@/pages/id/Projects.tsx";
+import IdSkill from "@/pages/id/Skill.tsx";
+import IdAbout from "@/pages/id/About.tsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <Homepage />,
-      },
-      {
-        path: "projects",
-        element: <Projects />,
-      },
-      {
-        path: "skill",
-        element: <Skill />
-      },
-      {
-        path: "about",
-        element: <About />
-      }
-    ]
-  },
-], {basename: '/personal-page/'})
+import Index from "@/pages/index.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Index />,
+    },
+    {
+      path: "/en",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <EnHomepage />,
+        },
+        {
+          path: "projects",
+          element: <EnProjects />,
+        },
+        {
+          path: "skill",
+          element: <EnSkill />,
+        },
+        {
+          path: "about",
+          element: <EnAbout />,
+        },
+      ],
+    },
+    {
+      path: "/id",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <IdHomepage />,
+        },
+        {
+          path: "projects",
+          element: <IdProjects />,
+        },
+        {
+          path: "skill",
+          element: <IdSkill />,
+        },
+        {
+          path: "about",
+          element: <IdAbout />,
+        },
+      ]
+    }
+  ],
+  { basename: "/personal-page/" },
+);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);
