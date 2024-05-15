@@ -8,7 +8,8 @@ import {
 } from "react-router-dom"
 import Homepage from '@/pages/Homepage'
 import Projects from '@/pages/Projects'
-import Skill from '@/pages/Skill.tsx'
+import Skill from '@/pages/Skill'
+import About from '@/pages/About.tsx'
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,12 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "tech",
+        path: "skill",
         element: <Skill />
+      },
+      {
+        path: "about",
+        element: <About />
       }
     ]
   },

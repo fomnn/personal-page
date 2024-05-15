@@ -2,27 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-p, span {
-  @apply text-zinc-800 dark:text-zinc-400
+p,
+span {
+  @apply text-zinc-800 dark:text-zinc-400;
 }
 
-h1, h2, h3, h4, h5, h6, .h {
-  @apply text-black dark:text-white 
+p {
+  @apply text-justify
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h {
+  @apply text-black dark:text-white;
 }
 
 h1 {
-  @apply font-bold
+  @apply font-bold;
 }
 
-h2, h3 {
-  @apply font-semibold
+h2,
+h3 {
+  @apply font-semibold;
 }
 
 #root {
-  @apply -z-50
+  @apply -z-50;
 }
 
 .mouseBackground {
-  background: rgb(244,114,182);
-background: radial-gradient(circle, rgba(244,114,182,1) 0%, rgba(201,0,255,1) 100%);
+  opacity: 16%;
+  background: rgb(114, 244, 181);
+  background: radial-gradient(
+    circle,
+    rgba(114, 244, 181, 0.9948573179271709) 0%,
+    rgba(0, 255, 154, 0) 78%
+  );
 }

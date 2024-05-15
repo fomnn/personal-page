@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <div className="space-y-16 py-12">
       <div className="space-y-4">
-        <h1 className="text-3xl">Projects</h1>
+        <h1 className="text-3xl">Projects.</h1>
         <p>
           During my studies at Telkom University, I've been involved in various
           projects that I'm quite proud of. Many of them are open-source, so

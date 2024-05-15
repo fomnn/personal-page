@@ -5,8 +5,10 @@ import { isDarkModeAtom } from "@/store/darkModePreference";
 
 import { useAtomValue } from "jotai";
 import { useEffect } from "react";
+import { useMouse } from "@reactuses/core";
 
 export default function App() {
+  const { pageX, pageY } = useMouse();
   const location = useLocation();
   const isDarkMode = useAtomValue(isDarkModeAtom);
 
@@ -19,7 +21,11 @@ export default function App() {
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-dvh bg-white z-20 px-6 py-4 lg:px-[27%] dark:bg-black relative">
+    <div className="relative z-20 min-h-dvh bg-white px-6 py-4 lg:px-[27%] dark:bg-black overflow-x-hidden">
+      <div
+        className="mouseBackground absolute size-[12rem] rounded-full -translate-x-1/2 -translate-y-1/2 -z-30"
+        style={{ left: pageX, top: pageY }}
+      ></div>
       <Header path={location.pathname} />
       <Outlet />
       <Footer />

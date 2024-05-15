@@ -161,7 +161,7 @@ export default function Tech() {
   return (
     <div className="space-y-16 py-12">
       <div className="space-y-4">
-        <h1 className="text-3xl">Skillsets</h1>
+        <h1 className="text-3xl">Skill.</h1>
         <p>
           The world of web development continues to develop at an exciting pace,
           introducing a large number of exciting new technologies. Here are some
