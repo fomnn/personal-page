@@ -2,7 +2,6 @@ import MdiGithub from "~icons/mdi/github";
 import MdiTelegram from "~icons/mdi/telegram";
 import IcBaselineWhatsapp from "~icons/ic/baseline-whatsapp";
 import me from "@/assets/me2.jpg";
-import AntDesignProjectTwotone from "~icons/ant-design/project-twotone";
 import { useEffect } from "react";
 
 export default function Homepage() {

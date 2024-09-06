@@ -1,7 +1,6 @@
 import SolarHomeSmileOutline from "~icons/solar/home-smile-outline"
 import SolarFolderWithFilesOutline from "~icons/solar/folder-with-files-outline"
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import SolarRulerPenBroken from "~icons/solar/ruler-pen-broken"
 import SolarMoonBroken from "~icons/solar/moon-broken"
 import { useAtom } from "jotai"
 import isDarkModeAtom from "@/store/darkModePreference"
