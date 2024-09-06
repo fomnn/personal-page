@@ -2,10 +2,16 @@ import MdiGithub from "~icons/mdi/github";
 import MdiTelegram from "~icons/mdi/telegram";
 import IcBaselineWhatsapp from "~icons/ic/baseline-whatsapp";
 import me from "@/assets/me2.jpg";
-import AntDesignProjectTwotone from "~icons/ant-design/project-twotone";
+import { projects } from "@/data/projects";
 import { useEffect } from "react";
+import { Link } from "react-router-dom"
+import { useAtomValue } from "jotai"
+import language from "@/store/language"
 
 export default function Homepage() {
+  const projects2 = projects.slice(0, 3);
+  const lang = useAtomValue(language)
+
   useEffect(() => {
     document.title = "My Personal Page";
   }, []);
@@ -62,73 +68,36 @@ export default function Homepage() {
           </a>
         </div>
       </div>
-      <div className="">
-        <h2 className="font-semibold">FEATURED PROJECTS</h2>
-        <div className=" mt-3 space-y-4">
-          <a
-            href="https://males.vercel.app/"
-            target="_blank"
-            className="group flex items-end gap-2"
-          >
-            <div className="max-w-[16rem] md:max-w-none">
-              <h4 className="text-white font-semibold group-hover:text-emerald-400 h">
-                Males
-              </h4>
-              <p className="truncate">
-                High School Learning Material Collection Website
-              </p>
-            </div>
-            <span className="flex-grow min-w-4 border-b border-zinc-800 group-hover:border-zinc-700 border-dashed h-4"></span>
-            <AntDesignProjectTwotone className="text-white text-2xl h" />
-          </a>
-          <a
-            href="https://sayurt.vercel.app/"
-            target="_blank"
-            className="group flex items-end gap-2"
-          >
-            <div className="max-w-[16rem] md:max-w-none">
-              <h4 className="text-white font-semibold group-hover:text-emerald-400 h">
-                Sayurt
-              </h4>
-              <p className="truncate">Healthy living starts with vegetables!</p>
-            </div>
-            <span className="flex-grow min-w-4 border-b border-zinc-800 group-hover:border-zinc-700 border-dashed h-4"></span>
-            <AntDesignProjectTwotone className="text-white text-2xl h" />
-          </a>
-          <a
-            href="https://cetakuy-nuxt.vercel.app/"
-            target="_blank"
-            className="group flex items-end gap-2"
-          >
-            <div className="max-w-[16rem] md:max-w-none">
-              <h4 className="text-white font-semibold group-hover:text-emerald-400 h">
-                Cetakuy
-              </h4>
-              <p className="truncate">
-                Print perfection, delivered to your door.
-              </p>
-            </div>
-            <span className="flex-grow min-w-4 border-b border-zinc-800 group-hover:border-zinc-700 border-dashed h-4"></span>
-            <AntDesignProjectTwotone className="text-white text-2xl h" />
-          </a>
-          <a
-            href="https://ra-smarttourism.vercel.app/"
-            target="_blank"
-            className="group flex items-end gap-2"
-          >
-            <div className="max-w-[16rem] md:max-w-none">
-              <h4 className="text-white font-semibold group-hover:text-emerald-400 h">
-                CoE Smart Tourism and Hospitality
-              </h4>
-              <p className="truncate">
-                Escape the ordinary, indulge in luxury.
-              </p>
-            </div>
-            <span className="flex-grow min-w-4 border-b border-zinc-800 group-hover:border-zinc-700 border-dashed h-4"></span>
-            <AntDesignProjectTwotone className="text-white text-2xl h" />
-          </a>
+      {/* <div className="">
+        <div className="text-white flex justify-between items-center">
+          <h2 className="font-semibold">PROJEK</h2>
+          <Link to={`/${lang}/projects`} className="hover:text-slate-400 transition duration-300 text-sm">Semua Projek</Link>
         </div>
-      </div>
+        <div className=" mt-3 space-y-4">\
+        {
+          projects2.map((project, index) => {
+            return (<a
+              href={project.link}
+              target="_blank"
+              className="group flex items-end gap-2"
+              key={index}
+            >
+              <div className="max-w-[16rem] md:max-w-none">
+                <h3 className="font-semibold group-hover:text-emerald-400">
+                  {project.title}
+                </h3>
+                <p className="truncate">
+                  {project.description}
+                </p>
+              </div>
+              <span className="h-4 min-w-4 flex-grow border-b border-dashed border-zinc-800 group-hover:border-zinc-700"></span>
+              <project.icon className="text-2xl text-white" />
+            </a>)
+          })
+        }
+
+        </div>
+      </div> */}
     </div>
   );
 }

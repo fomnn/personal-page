@@ -66,7 +66,7 @@ export default function Homepage() {
           </a>
         </div>
       </div>
-      <div className="">
+      {/* <div className="">
         <h2 className="font-semibold">FEATURED PROJECTS</h2>
         <div className=" mt-3 space-y-4">
           <a
@@ -132,7 +132,7 @@ export default function Homepage() {
             <AntDesignProjectTwotone className="text-white text-2xl h" />
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

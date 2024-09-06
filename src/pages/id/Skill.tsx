@@ -19,6 +19,7 @@ import EosIconsMaster from "~icons/eos-icons/master";
 import SkillIconsFigmaDark from "~icons/skill-icons/figma-dark";
 import LogosAdobePhotoshop from "~icons/logos/adobe-photoshop";
 import VscodeIconsFileTypeTailwind from "~icons/vscode-icons/file-type-tailwind";
+import LogosSupabaseIcon from '~icons/logos/supabase-icon'
 import SkillItem from "@/components/SkillItem";
 
 export default function Tech() {
@@ -138,6 +139,10 @@ export default function Tech() {
     {
       Icon: LogosPostgresql,
       title: "Postgres",
+    },
+    {
+      Icon: LogosSupabaseIcon,
+      title: "Supabase",
     },
   ];
 

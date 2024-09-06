@@ -35,7 +35,7 @@ export default function Header() {
   }
 
   return (
-    <header className="flex h-[3rem] items-center justify-between rounded-full bg-zinc-100 px-5 dark:bg-[#222222]">
+    <header className="flex h-[3rem] items-center justify-between rounded-full transition-colors duration-1000 bg-zinc-100 px-5 dark:bg-[#222222]">
       <div className="flex items-center gap-4 text-2xl font-thin">
         <Link
           to={`/${lang}`}
@@ -51,7 +51,7 @@ export default function Header() {
           />
           <span className="absolute top-9 hidden h-[2px] w-7 bg-gradient-to-r from-green-400/5 via-green-400/80 to-green-400/5"></span>
         </Link>
-        <Link
+        {/* <Link
           to={`/${lang}/skill`}
           className="relative flex size-7 cursor-pointer items-center justify-center rounded-full after:absolute after:-top-2 after:left-[120%] after:z-10 after:hidden after:rounded-md after:bg-white after:px-2 after:text-sm after:font-normal after:text-stone-700 after:content-['Skill'] hover:after:block"
         >
@@ -64,7 +64,7 @@ export default function Header() {
             }
           />
           <span className="absolute top-9 hidden h-[2px] w-7 bg-gradient-to-r from-green-400/5 via-green-400/80 to-green-400/5"></span>
-        </Link>
+        </Link> */}
         <Link
           to={`/${lang}/projects`}
           className="relative flex size-7 cursor-pointer items-center justify-center rounded-full after:absolute after:-top-2 after:left-[120%] after:z-10 after:hidden after:rounded-md after:bg-white after:px-2 after:text-sm after:font-normal after:text-stone-700 after:content-['Project'] hover:after:block"

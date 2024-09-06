@@ -1,35 +1,36 @@
-import { SVGProps, useEffect } from "react";
-import VscodeIconsFileTypeVue from "~icons/vscode-icons/file-type-vue";
-import VscodeIconsFileTypeHtml from "~icons/vscode-icons/file-type-html";
-import VscodeIconsFileTypeCss from "~icons/vscode-icons/file-type-css";
-import SkillIconsJavascript from "~icons/skill-icons/javascript";
-import VscodeIconsFileTypeTypescriptOfficial from "~icons/vscode-icons/file-type-typescript-official";
-import VscodeIconsFileTypePython from "~icons/vscode-icons/file-type-python";
-import VscodeIconsFileTypePhp from "~icons/vscode-icons/file-type-php";
-import VscodeIconsFileTypeReactjs from "~icons/vscode-icons/file-type-reactjs";
-import SkillIconsAlpinejsDark from "~icons/skill-icons/alpinejs-dark";
-import SkillIconsExpressjsDark from "~icons/skill-icons/expressjs-dark";
-import SkillIconsFlaskLight from "~icons/skill-icons/flask-light";
-import NitroIcon from "@/assets/icons/nitro.svg";
-import VscodeIconsFileTypeNuxt from "~icons/vscode-icons/file-type-nuxt";
-import VscodeIconsFileTypeMysql from "~icons/vscode-icons/file-type-mysql";
-import LogosPostgresql from "~icons/logos/postgresql";
-import VscodeIconsFileTypeFlutter from "~icons/vscode-icons/file-type-flutter";
-import EosIconsMaster from "~icons/eos-icons/master";
-import SkillIconsFigmaDark from "~icons/skill-icons/figma-dark";
-import LogosAdobePhotoshop from "~icons/logos/adobe-photoshop";
-import VscodeIconsFileTypeTailwind from "~icons/vscode-icons/file-type-tailwind";
-import SkillItem from "@/components/SkillItem";
+import { SVGProps, useEffect } from "react"
+import VscodeIconsFileTypeVue from "~icons/vscode-icons/file-type-vue"
+import VscodeIconsFileTypeHtml from "~icons/vscode-icons/file-type-html"
+import VscodeIconsFileTypeCss from "~icons/vscode-icons/file-type-css"
+import SkillIconsJavascript from "~icons/skill-icons/javascript"
+import VscodeIconsFileTypeTypescriptOfficial from "~icons/vscode-icons/file-type-typescript-official"
+import VscodeIconsFileTypePython from "~icons/vscode-icons/file-type-python"
+import VscodeIconsFileTypePhp from "~icons/vscode-icons/file-type-php"
+import VscodeIconsFileTypeReactjs from "~icons/vscode-icons/file-type-reactjs"
+import SkillIconsAlpinejsDark from "~icons/skill-icons/alpinejs-dark"
+import SkillIconsExpressjsDark from "~icons/skill-icons/expressjs-dark"
+import SkillIconsFlaskLight from "~icons/skill-icons/flask-light"
+import NitroIcon from "@/assets/icons/nitro.svg"
+import VscodeIconsFileTypeNuxt from "~icons/vscode-icons/file-type-nuxt"
+import VscodeIconsFileTypeMysql from "~icons/vscode-icons/file-type-mysql"
+import LogosPostgresql from "~icons/logos/postgresql"
+import VscodeIconsFileTypeFlutter from "~icons/vscode-icons/file-type-flutter"
+import EosIconsMaster from "~icons/eos-icons/master"
+import SkillIconsFigmaDark from "~icons/skill-icons/figma-dark"
+import LogosAdobePhotoshop from "~icons/logos/adobe-photoshop"
+import VscodeIconsFileTypeTailwind from "~icons/vscode-icons/file-type-tailwind"
+import SkillItem from "@/components/SkillItem"
+import LogosSupabaseIcon from '~icons/logos/supabase-icon'
 
 export default function Tech() {
   useEffect(() => {
-    document.title = "My Personal Page | Skill";
-  }, []);
+    document.title = "My Personal Page | Skill"
+  }, [])
 
   const programmingLanguages: {
-    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string;
-    title: string;
-    mastered?: boolean;
+    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string
+    title: string
+    mastered?: boolean
   }[] = [
     {
       Icon: VscodeIconsFileTypeHtml,
@@ -63,9 +64,9 @@ export default function Tech() {
   ]
 
   const frontEndFrameworks: {
-    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string;
-    title: string;
-    mastered?: boolean;
+    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string
+    title: string
+    mastered?: boolean
   }[] = [
     {
       Icon: VscodeIconsFileTypeVue,
@@ -93,9 +94,9 @@ export default function Tech() {
   ]
 
   const backendFrameworks: {
-    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string;
-    title: string;
-    mastered?: boolean;
+    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string
+    title: string
+    mastered?: boolean
   }[] = [
     {
       Icon: SkillIconsExpressjsDark,
@@ -114,9 +115,9 @@ export default function Tech() {
   ]
 
   const fullstackFrameworks: {
-    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string;
-    title: string;
-    mastered?: boolean;
+    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string
+    title: string
+    mastered?: boolean
   }[] = [
     {
       Icon: VscodeIconsFileTypeNuxt,
@@ -126,9 +127,9 @@ export default function Tech() {
   ]
   
   const databases: {
-    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string;
-    title: string;
-    mastered?: boolean;
+    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string
+    title: string
+    mastered?: boolean
   }[] = [
     {
       Icon: VscodeIconsFileTypeMysql,
@@ -139,12 +140,16 @@ export default function Tech() {
       Icon: LogosPostgresql,
       title: "Postgres",
     },
+    {
+      Icon: LogosSupabaseIcon,
+      title: "Supabase",
+    },
   ]
 
   const others: {
-    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string;
-    title: string;
-    mastered?: boolean;
+    Icon: ((props: SVGProps<SVGSVGElement>) => React.ReactElement) | string
+    title: string
+    mastered?: boolean
   }[] = [
     {
       Icon: SkillIconsFigmaDark,
@@ -229,5 +234,5 @@ export default function Tech() {
         </div>
       </div>
     </div>
-  );
+  )
 }
