@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import AntDesignProjectTwotone from "~icons/ant-design/project-twotone";
-
+import { projects } from "@/data/projects";
+import { getSkillIcon } from "@/utlis/getIconBySkillName"
 export default function Projects() {
   useEffect(() => {
     document.title = "My Personal Page | Projects";
@@ -18,66 +18,47 @@ export default function Projects() {
         </p>
       </div>
       <div className=" mt-3 space-y-4">
-        <a
-          href="https://males.vercel.app/"
-          target="_blank"
-          className="group flex items-end gap-2"
-        >
-          <div className="max-w-[16rem] md:max-w-none">
-            <h3 className="font-semibold group-hover:text-emerald-400">
-              Males
-            </h3>
-            <p className="truncate">
-              High School Learning Material Collection Website
-            </p>
-          </div>
-          <span className="h-4 min-w-4 flex-grow border-b border-dashed border-zinc-800 group-hover:border-zinc-700"></span>
-          <AntDesignProjectTwotone className="text-2xl text-white h" />
-        </a>
-        <a
-          href="https://sayurt.vercel.app/"
-          target="_blank"
-          className="group flex items-end gap-2"
-        >
-          <div className="max-w-[16rem] md:max-w-none">
-            <h3 className="font-semibold group-hover:text-emerald-400">
-              Sayurt
-            </h3>
-            <p className="truncate">Healthy living starts with vegetables!</p>
-          </div>
-          <span className="h-4 min-w-4 flex-grow border-b border-dashed border-zinc-800 group-hover:border-zinc-700"></span>
-          <AntDesignProjectTwotone className="text-2xl text-white h" />
-        </a>
-        <a
-          href="https://cetakuy-nuxt.vercel.app/"
-          target="_blank"
-          className="group flex items-end gap-2"
-        >
-          <div className="max-w-[16rem] md:max-w-none">
-            <h3 className="font-semibold group-hover:text-emerald-400">
-              Cetakuy
-            </h3>
-            <p className="truncate">
-              Print perfection, delivered to your door.
-            </p>
-          </div>
-          <span className="h-4 min-w-4 flex-grow border-b border-dashed border-zinc-800 group-hover:border-zinc-700"></span>
-          <AntDesignProjectTwotone className="text-2xl text-white h" />
-        </a>
-        <a
-          href="https://ra-smarttourism.vercel.app/"
-          target="_blank"
-          className="group flex items-end gap-2"
-        >
-          <div className="max-w-[16rem] md:max-w-none">
-            <h3 className="font-semibold group-hover:text-emerald-400">
-              CoE Smart Tourism and Hospitality
-            </h3>
-            <p className="truncate">Escape the ordinary, indulge in luxury.</p>
-          </div>
-          <span className="h-4 min-w-4 flex-grow border-b border-dashed border-zinc-800 group-hover:border-zinc-700"></span>
-          <AntDesignProjectTwotone className="text-2xl text-white h" />
-        </a>
+        {
+          projects.map((project, index) => {
+            return (
+              <a
+                href={project.link}
+                target="_blank"
+                className="group flex items-stretch gap-2 w-full h-full"
+                key={index}
+              >
+                <div className="w-full">
+                  <div className="flex justify-between w-full">
+                    <h3 className="font-semibold group-hover:text-emerald-400 w-full">
+                      {project.title}
+                    </h3>
+                    <div className="text-xs items-center gap-2 flex-grow flex ">
+                      {/* <MaterialSymbolsLightPhoneAndroidRounded className="text-white" />
+                      <LogosVue /> */}
+                      {project.stack.map(skill => {
+                        const icon = getSkillIcon(skill)
+                        if (!icon) return null
+                        if (icon.icon) {
+                          return <abbr title={skill}><img src={icon.icon} /></abbr>
+                        } else {
+                          return <abbr title={skill}><icon.Icon /></abbr>
+                        }
+                        // return icon && typeof icon === "string" ? (<img src={icon} />): (<icon />)
+                      })}
+                    </div>
+                  </div>
+                  <div className="flex items-end">
+                    <p className="truncate w-fit">
+                      {project.description}
+                    </p>
+                    <span className="border-b border-dashed h-2 flex-grow border-zinc-800 group-hover:border-zinc-700"></span>
+                  </div>
+                </div>
+                <project.icon className="text-2xl text-white" />
+              </a>
+            )
+          })
+        }
       </div>
     </div>
   );

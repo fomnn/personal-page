@@ -24,11 +24,11 @@ export default function SkillItem({
         <img
           src={Icon}
           alt={title}
-          className="size-14 drop-shadow-2xl transition-all duration-150 ease-out group-hover:-translate-y-2 group-hover:scale-110 group-hover:drop-shadow-[0px_12px_23px_#34d399]"
+          className="size-14 drop-shadow-2xl transition-all duration-150 ease-out group-hover:-translate-y-2 group-hover:scale-110 group-hover:drop-shadow-[0px_12px_23px_#44FFFF]"
         />
       ) : (
         <Icon
-          className="text-5xl drop-shadow-2xl transition-all duration-150 ease-out group-hover:-translate-y-2 group-hover:scale-110 group-hover:drop-shadow-[0px_12px_23px_#34d399]"
+          className="text-5xl drop-shadow-2xl transition-all duration-150 ease-out group-hover:-translate-y-2 group-hover:scale-110 group-hover:drop-shadow-[0px_12px_23px_#44FFFF]"
           style={{ rotate: `${randomDeg}deg` }}
         />
       )}
