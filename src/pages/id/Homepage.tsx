@@ -2,15 +2,14 @@ import MdiGithub from "~icons/mdi/github";
 import MdiTelegram from "~icons/mdi/telegram";
 import IcBaselineWhatsapp from "~icons/ic/baseline-whatsapp";
 import me from "@/assets/me2.jpg";
-import { projects } from "@/data/projects";
+// import { projects } from "@/data/projects";
 import { useEffect } from "react";
-import { Link } from "react-router-dom"
-import { useAtomValue } from "jotai"
-import language from "@/store/language"
+// import { useAtomValue } from "jotai"
+// import language from "@/store/language"
 
 export default function Homepage() {
-  const projects2 = projects.slice(0, 3);
-  const lang = useAtomValue(language)
+  // const projects2 = projects.slice(0, 3);
+  // const lang = useAtomValue(language)
 
   useEffect(() => {
     document.title = "My Personal Page";

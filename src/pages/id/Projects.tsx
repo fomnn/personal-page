@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { projects } from "@/data/projects"
-import MaterialSymbolsLightPhoneAndroidRounded from '~icons/material-symbols-light/phone-android-rounded'
-import LogosVue from '~icons/logos/vue'
+// import MaterialSymbolsLightPhoneAndroidRounded from '~icons/material-symbols-light/phone-android-rounded'
+// import LogosVue from '~icons/logos/vue'
 import { getSkillIcon } from "@/utlis/getIconBySkillName"
 export default function Projects() {
   useEffect(() => {
