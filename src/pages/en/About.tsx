@@ -30,11 +30,11 @@ export default function AboutMe() {
             . But my friends call me Oman, some people also call me Omen😊
           </p>
           <a
-            href="/personal-page/CV.pdf"
+            href="/resume.pdf"
             target="_blank"
             className="flex w-fit items-center gap-2 border-emerald-400 hover:border-b dark:text-white"
           >
-            Read my CV
+            Read my resume
             <MaterialSymbolsArrowRightAltRounded className="text-lg text-emerald-500" />
           </a>
         </div>

@@ -31,11 +31,11 @@ export default function AboutMe() {
             Omen😊
           </p>
           <a
-            href="/personal-page/CV.pdf"
+            href="/resume.pdf"
             target="_blank"
             className="flex w-fit items-center gap-2 border-emerald-400 hover:border-b dark:text-white"
           >
-            Baca CV saya
+            Baca resume saya
             <MaterialSymbolsArrowRightAltRounded className="text-lg text-emerald-500" />
           </a>
         </div>
