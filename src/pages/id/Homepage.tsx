@@ -39,7 +39,7 @@ export default function Homepage() {
         <h2 className="font-semibold">FIND ME ON</h2>
         <div className="mt-3 space-y-1">
           <a
-            href="https://github.com/omanfathurrahman"
+            href="https://github.com/fomnn"
             target="_black"
             className="group flex gap-4 items-center"
           >
